@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.diccionarios.filosofia",
+      "sha256_cert_fingerprints": [
+        "8A:81:1E:41:2E:65:D7:A9:9D:2D:C7:B3:B5:B5:F0:4F:E2:EE:17:E2:FC:96:4F:BE:BD:34:02:C1:F3:F0:39:90"
+      ]
+    }
+  }
+]
