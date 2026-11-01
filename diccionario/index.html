@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abrir definición · Diccionarios de filosofía</title>
+<style>
+body{box-sizing:border-box;margin:0;padding:2rem 1rem;background:#f3f1e9;color:#182522;font:1rem/1.55 system-ui,sans-serif}
+main{max-width:38rem;margin:8vh auto;padding:1.5rem;background:#fff;border:1px solid #deded6;border-radius:.65rem}
+h1{font:normal 1.7rem Georgia,serif;color:#183d39;margin:.1rem 0 1rem}
+.button{display:inline-block;margin:.8rem 0;padding:.7rem 1rem;border-radius:.4rem;background:#13594f;color:#fff;text-decoration:none}
+.muted{color:#53635c;font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Diccionarios de filosofía</h1>
+<p id="entry">Abre este enlace desde una nota para consultar una definición.</p>
+<a id="open" class="button" hidden>Abrir en la aplicación</a>
+<p class="muted">La definición se consulta en la aplicación instalada en tu dispositivo. No se publica el texto del diccionario en este sitio.</p>
+</main>
+<script>
+const id=new URLSearchParams(location.search).get('entry')||'';
+if(/^(ferrater|pelayo)-[0-9]{1,6}$/.test(id)){
+  document.querySelector('#entry').textContent='Definición: '+id;
+  const link=document.querySelector('#open');
+  link.href='dicfilosofia://entry/'+id;
+  link.hidden=false;
+}
+</script>
+</body>
+</html>
