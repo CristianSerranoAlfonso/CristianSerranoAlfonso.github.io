@@ -26,6 +26,9 @@ if(/^(ferrater|pelayo)-[0-9]{1,6}$/.test(id)){
   const link=document.querySelector('#open');
   link.href='dicfilosofia://entry/'+id;
   link.hidden=false;
+  // Android App Links should bypass this page; try opening the app when a
+  // browser receives the web URL directly. Browsers may require a user tap.
+  window.location.href=link.href;
 }
 </script>
 </body>
